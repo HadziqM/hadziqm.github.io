@@ -1,7 +1,11 @@
 <?php
-$myFile = "demo.json";
-$fh = fopen($myFile, 'w') or die("can't open file");
-$stringData = $_GET["data"];
-fwrite($fh, $stringData);
-fclose($fh)
+$file = fopen("demo.json","w+");
+
+$json = $_POST['json'];
+
+$jsonDecode = json_decode($json);
+
+fwrite($file, $jsonDecode);
+fclose($file);
+
 ?>
