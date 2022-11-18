@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import Backdrop from "./backdrop";
-import { FaGoogle, FaGithub, FaDiscord } from "react-icons/fa";
 
 interface Props {
-  text?: string;
+  text: boolean;
   handleClose: React.MouseEventHandler<HTMLDivElement | HTMLButtonElement>;
 }
 
-export default function Modal({ handleClose }: Props) {
+export default function Modal({ handleClose, text }: Props) {
   const dropIn = {
     hiden: { y: "-100vh", opacity: 0 },
     visible: {
@@ -26,40 +25,15 @@ export default function Modal({ handleClose }: Props) {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation}
-        className="w-[clamp(50%,700px,90%)] h-[min(50%,300px)] m-auto p-8 rounded-md flex flex-col items-center bg-black text-white"
+        className="w-[clamp(50%,700px,90%)] h-[min(50%,300px)] m-auto p-8 rounded-md flex flex-col items-center bg-white text-black z-50"
         variants={dropIn}
         initial="hiden"
         exit="exit"
         animate="visible"
       >
-        <h1 className="font-bold mb-auto text-2xl">Welcome Back.</h1>
-        <button
-          onClick={(e) => {
-            e.preventDefault;
-          }}
-          className="px-4 py-1 rounded-full bg-gray-800 my-1 flex items-center gap-1"
-        >
-          <FaGoogle />
-          Login With Google
-        </button>
-        <button
-          onClick={(e) => {
-            e.preventDefault;
-          }}
-          className="px-4 py-1 rounded-full bg-gray-800 my-1 flex items-center gap-1"
-        >
-          <FaGithub />
-          Login With Github
-        </button>
-        <button
-          onClick={(e) => {
-            e.preventDefault;
-          }}
-          className="px-4 py-1 rounded-full bg-gray-800 my-1 flex items-center gap-1"
-        >
-          <FaDiscord />
-          Login With Discord
-        </button>
+        <h1 className="font-bold mb-auto text-2xl">
+          {text ? "Congrats You win" : "Sorry You lose"}
+        </h1>
         <button
           onClick={handleClose}
           className="px-2 py-[0.1rem] rounded-full bg-red-700 hover:bg-red-600 my-1 text-white"

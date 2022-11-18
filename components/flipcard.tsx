@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { list } from "postcss";
 import React from "react";
 interface Props {
   top: string;
@@ -21,11 +20,14 @@ export default function Flip({ top, left, idk, check, time }: Props) {
       setInit(false);
     }, 500 + time);
   }, []);
+  const fClick = () => {
+    setFlip(!flip);
+    setTimeout(() => setFlip2(!flip2), 100);
+  };
   return (
     <div
       onClick={(e) => {
-        setFlip(!flip);
-        setTimeout(() => setFlip2(!flip2), 100);
+        fClick();
         check(idk);
       }}
       className="absolute"

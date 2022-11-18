@@ -4,7 +4,7 @@ interface Props {
 
 export default function Layout({ children }: Props) {
   return (
-    <main className="light">
+    <main>
       <article>{children}</article>
     </main>
   );
