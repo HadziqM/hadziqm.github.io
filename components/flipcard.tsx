@@ -1,14 +1,16 @@
 import Image from "next/image";
 import React from "react";
+
 interface Props {
   top: string;
   left: string;
   idk: string;
-  check: any;
+  check: (i: string) => void;
   time: number;
 }
 export default function Flip({ top, left, idk, check, time }: Props) {
   const [flip, setFlip] = React.useState(false);
+  const [counter, setCounter] = React.useState(0);
   const [flip2, setFlip2] = React.useState(false);
   const [init, setInit] = React.useState(true);
   React.useEffect(() => {
@@ -28,7 +30,10 @@ export default function Flip({ top, left, idk, check, time }: Props) {
     <div
       onClick={(e) => {
         fClick();
-        check(idk);
+        if (counter < 1) {
+          check(idk);
+          setCounter(counter + 1);
+        }
       }}
       className="absolute"
       style={{
@@ -40,7 +45,7 @@ export default function Flip({ top, left, idk, check, time }: Props) {
       }}
     >
       <div
-        className="flip-card-inner relative"
+        className="flip-card-inner relative cursor-pointer"
         style={flip ? {} : { transform: "rotateY(180deg)" }}
       >
         <div
@@ -49,19 +54,12 @@ export default function Flip({ top, left, idk, check, time }: Props) {
         >
           <Image
             src={flip2 ? `/${idk}.png` : `/f.png`}
+            style={!flip ? { transform: "rotateY(180deg)" } : {}}
             alt="cards"
             width={80}
             height={100}
           />
         </div>
-        {/* <div className="backface absolute">
-        <Image
-            src={init ? "/f.png" : `/${idk}.png`}
-            alt="cards"
-            width={80}
-            height={100}
-        />
-        </div> */}
       </div>
     </div>
   );

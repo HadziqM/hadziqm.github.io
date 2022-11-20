@@ -28,13 +28,12 @@ a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #cb9b27;
-  border-radius: 5px;
+  background: #555;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ab7b07;
+  background: #333;
 }
 .backface {
   -webkit-backface-visibility: hidden;
@@ -51,8 +50,8 @@ a {
 .front-button {
   position: inherit;
   color: white;
-  margin: 3rem;
-  padding: 1rem;
+  margin: 1rem;
+  padding: 0.5rem;
   background-color: #333;
   border-radius: 10%;
   z-index: 2;
@@ -97,6 +96,36 @@ a {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+.background-grad {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+}
+.text2Style {
+  background: 50% 100%/50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+  font-family: "Source Sans Pro", sans-serif;
+  animation: glow 2500ms linear infinite 2000ms;
+}
+@keyframes glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
 }
 
 @keyframes glowing {

@@ -1,17 +1,25 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion, TargetAndTransition, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 interface Props {
   children: React.ReactNode;
   animate: string;
+  animation?: TargetAndTransition;
+  getVisibility?: () => boolean;
 }
 
-export default function Box({ children, animate }: Props) {
+export default function Box({
+  children,
+  animate,
+  getVisibility,
+  animation,
+}: Props) {
   const control = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
     if (inView) control.start("visible");
+    getVisibility && getVisibility();
   }, [control, inView]);
   const boxVariant = {
     visible: {
@@ -22,9 +30,10 @@ export default function Box({ children, animate }: Props) {
     },
     right: { opacity: 0, scale: 0, x: 400 },
     left: { opacity: 0, scale: 0, x: -400 },
+    init: { opacity: 0, scale: 0 },
   };
   return (
-    <section className="flex justify-center items-center w-screen h-[150vh] z-50">
+    <section className="flex justify-center items-center w-screen py-20 z-50">
       <motion.div
         ref={ref}
         className="flex justify-center items-center "
