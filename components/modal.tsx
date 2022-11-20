@@ -25,13 +25,13 @@ export default function Modal({ handleClose, text }: Props) {
     <Backdrop onClick={handleClose}>
       <motion.div
         onClick={(e) => e.stopPropagation}
-        className="w-[clamp(50%,700px,90%)] h-[min(50%,300px)] m-auto p-8 rounded-md flex flex-col items-center bg-white text-black z-50"
+        className="w-[clamp(40%,400px,90%)] h-[200px] m-auto p-8 rounded-md flex flex-col items-center z-50 bg-gray-800"
         variants={dropIn}
         initial="hiden"
         exit="exit"
         animate="visible"
       >
-        <h1 className="font-bold mb-auto text-2xl">
+        <h1 className="mb-auto text-2xl font-mono text-gray-300">
           {text ? "Congrats You win" : "Sorry You lose"}
         </h1>
         <button

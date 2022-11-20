@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/layout";
 import Card from "../components/cardBox";
-import Link from "next/link";
+import Profile from "../components/profileCard";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -41,6 +41,7 @@ export default function Porto() {
           name="description"
           content="Portofolio A.Hadziq Masfuh using Next Js"
         />
+        <meta property="og:image" content="/foto.png" />
         <link rel="icon" href="/idk.png" />
       </Head>
       <Layout>
@@ -49,47 +50,7 @@ export default function Porto() {
         ) : (
           <>
             <Box animate="init">
-              <div
-                ref={getScroll}
-                className="flex max-md:flex-col justify-center items-center relative"
-              >
-                <div className="relative w-[330px] h-[370px] shadow-[_15px_15px_0px_#333333] m-4">
-                  <Image
-                    src="/foto.jpg"
-                    alt="hadziq's photo"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <motion.div
-                  className="flex flex-col gap-2 w-[350px] h-[420px] py-2 px-4 max-md:border-2 md:border-l-2 justify-center border-white m-4 bg-[rgba(0,0,0,0.7)]"
-                  initial={{ opacity: 0, x: 400 }}
-                  animate={{ opacity: 1, transition: { duration: 2 }, x: 0 }}
-                >
-                  <h1 className="flex text-[1.5rem] w-full text-center">
-                    About Me
-                  </h1>
-                  <p className="text-justify text-[0.8rem]">
-                    I am general software developer. I am both designer and
-                    developer with some good knowlage with front end and back
-                    end. i'm used to building full-stack web with Typescript
-                    using NextJs ,AstroJs ,ViteJs also python with django. i'm
-                    also used to build windows application with rust using Tauri
-                    and Python with Qt and Tk. My strong point is i'm quick
-                    learn person, despite i m not actually graduated from
-                    software engineer, i know a lot about software developer and
-                    i already build many project involving web development and
-                    windows application using python,typescript and rust and
-                    most of them is still used untill now and offcourse i could
-                    do electric related task such as setting up server hardware,
-                    designing microcontroller and program it using assembly,
-                    arduino or c++, my learning pattern is by finding open
-                    source project (mostly on discord comunity) on my free time
-                    then helping them develop their project or build my own
-                    project realted to it
-                  </p>
-                </motion.div>
-              </div>
+              <Profile windowW={windowWidth} />
             </Box>
             <div className="flex justify-center items-center p-20">
               <VerticalTimeline
@@ -156,7 +117,7 @@ export default function Porto() {
               <div className="grid max-md:grid-cols-1 grid-cols-2 gap-8 lg:grid-cols-3">
                 <Card
                   picture="/molina.png"
-                  link="/"
+                  link="https://github.com/HadziqM/QT-GUI-MOLINA"
                   duration={secondDur(1)}
                   skill={[
                     { name: "Qt", precent: 50 },
@@ -166,7 +127,7 @@ export default function Porto() {
                   ]}
                 >
                   <h1>Electrical Bus Development</h1>
-                  <p className="text-[0.7rem] text-justify">
+                  <p className="text-[0.6rem] text-justify">
                     Develop electrical bus, mainly in Vehicle Control Unit
                     (VCU), developing own battery management system (because the
                     one available in factory doesn’t suit our automatic
@@ -181,33 +142,55 @@ export default function Porto() {
                 </Card>
                 <Card
                   picture="/ta.png"
-                  link="/"
+                  link="https://github.com/HadziqM/AC-Control-Panel"
                   duration={secondDur(2)}
                   skill={[
                     { name: "MQTT", precent: 50 },
                     { name: "Python", precent: 70 },
                     { name: "Arduino", precent: 60 },
+                    { name: "Blender", precent: 30 },
                     { name: "Linux", precent: 30 },
                   ]}
                 >
                   <h1>Fish Cultivation Pound Control System</h1>
-                  <p className="text-[0.7rem] text-justify">
-                    My final project was developing Control system building
-                    around fish pound so we can monitor fish status as well as
+                  <p className="text-[0.6rem] text-justify">
+                    My final project was developing Control system built around
+                    fish pound, so we can monitor fish condition as well as
                     giving them fodder automatically, this is actually small
                     prototype to develop monitored indoor fish cultivation to
                     minimize human error at handling pound as well as increasing
-                    its quality by making appropriate treatment. the sistem
+                    its quality by making appropriate treatment. the system
                     consist sensor node and server node, sensor node using
                     sensor and actuator that controlled with with server via
-                    wireless connection between Raspberry Pi and NodeMcu, the
+                    wireless connection between Raspberry Pi and NodeMCU, the
                     protocol used to comunicate is using MQTT between LAN
                     connection
                   </p>
                 </Card>
                 <Card
+                  picture="/database.png"
+                  link="https://github.com/HadziqM/MHFZ-database-editor"
+                  duration={secondDur(2)}
+                  skill={[
+                    { name: "Python", precent: 70 },
+                    { name: "Postgresql", precent: 30 },
+                  ]}
+                >
+                  <h1>MHFZ Database Editor</h1>
+                  <p className="text-[0.6rem] text-justify">
+                    This is my first software i built when i learn Python, this
+                    one intended for game Monster Hunter Frontier that still on
+                    Resurrection by good people in discord, i make this software
+                    in hope its usefull for people who want to play the game,
+                    the main feature of this software is how easy its to
+                    interact with database and change many attribute on game,
+                    this one especially usefull for large server to moderate
+                    their player
+                  </p>
+                </Card>
+                <Card
                   picture="/discord.png"
-                  link="/"
+                  link="https://github.com/HadziqM/discord-bot-elzelion"
                   duration={secondDur(3)}
                   skill={[
                     { name: "Python", precent: 100 },
@@ -215,7 +198,7 @@ export default function Porto() {
                   ]}
                 >
                   <h1>Developing Server and discord bot</h1>
-                  <p className="text-[0.7rem] text-justify">
+                  <p className="text-[0.6rem] text-justify">
                     discord has been my favorite social chat platform and i do
                     learn a lot from community there i once join monster hunter
                     frontier server (one of my favorite game but out of
@@ -240,8 +223,8 @@ export default function Porto() {
                   ]}
                 >
                   <h1>First Website</h1>
-                  <p className="text-[0.7rem] text-justify">
-                    thid is my first website using only using plain html, css
+                  <p className="text-[0.6rem] text-justify">
+                    this is my first website using only using plain html, css
                     and javascript, this one created when i start learning about
                     being web developer, using plain css and javascript is
                     really hard, especially when the project grows larger, in
@@ -262,10 +245,10 @@ export default function Porto() {
                   ]}
                   duration={secondDur(5)}
                   picture={"masjid.png"}
-                  link={""}
+                  link={"https://github.com/HadziqM/next-wp-webapp"}
                 >
                   <h1>Next - Wordpress</h1>
-                  <p className="text-[0.7rem] text-justify">
+                  <p className="text-[0.6rem] text-justify">
                     my task at PT polowijo is to make website for mosque, when
                     mostly wordpress is enough for the task, my supervisor want
                     something big on the website such as on demand ad system,
@@ -289,10 +272,10 @@ export default function Porto() {
                   ]}
                   duration={secondDur(6)}
                   picture={"ship.png"}
-                  link={""}
+                  link={"https://github.com/HadziqM/shipits"}
                 >
                   <h1>Ship Monitoring</h1>
-                  <p className="text-[0.7rem] text-justify">
+                  <p className="text-[0.6rem] text-justify">
                     this is my first program that i make when i learned about
                     nextjs and Typescript, this one actually a project to make a
                     system that can be used for indonesian ship, first one we
@@ -310,13 +293,16 @@ export default function Porto() {
                     { name: "Trypescript", precent: 60 },
                     { name: "Css", precent: 40 },
                     { name: "Rust", precent: 70 },
+                    { name: "Photoshop", precent: 30 },
                   ]}
                   duration={secondDur(7)}
                   picture={"jam.jpeg"}
-                  link={""}
+                  link={
+                    "https://github.com/HadziqM/Tauri-WindowsVista-AntiqueClock"
+                  }
                 >
-                  <h1>Jam Menara Masjid</h1>
-                  <p className="text-[0.7rem] text-justify">
+                  <h1>Mosque's Tower LED Clock</h1>
+                  <p className="text-[0.6rem] text-justify">
                     when i work on PT polowijo gosari, one of my task is to back
                     up old computer that used to control LED display on mosque,
                     one of the main software to run is the digital clock that
@@ -327,6 +313,29 @@ export default function Porto() {
                     create that software with Tauri, a Rust program that can run
                     in multi platform, and using webview to display desired
                     design.
+                  </p>
+                </Card>
+                <Card
+                  skill={[
+                    { name: "Trypescript", precent: 60 },
+                    { name: "Css", precent: 40 },
+                    { name: "Photoshop", precent: 30 },
+                  ]}
+                  duration={secondDur(8)}
+                  picture={"porto.png"}
+                  link={"https://github.com/HadziqM/hadziqm.github.io"}
+                >
+                  <h1>This Portofolio</h1>
+                  <p className="text-[0.6rem] text-justify">
+                    This website i build actually just for fun or i guess to
+                    pass time, but since i learn that i could statically serve
+                    website using NEXT JS, might as well try to make something
+                    with it, the card design isnt really mine, the card is
+                    actually something me and myfriend build for discord bot
+                    game, with this website i pour what i learn for the past 3
+                    months of learning react, typescript and next js, to be
+                    honest its not really good website but i think i still could
+                    do way better
                   </p>
                 </Card>
               </div>

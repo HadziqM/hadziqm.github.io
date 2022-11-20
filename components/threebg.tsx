@@ -46,7 +46,6 @@ function Framemot2(prop: { pos: number[] }) {
     </mesh>
   );
 }
-
 export default function Three() {
   const randomHundreds = (times: number) => {
     let idk: number[][] = [];

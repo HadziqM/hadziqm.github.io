@@ -75,15 +75,18 @@ export default function Home() {
         <title>Portofolio - Hadziq Masfuh</title>
         <meta
           name="description"
-          content="Portofolio A.Hadziq Masfuh using Next Js"
+          content="Play crappy card game made purely with CSS and javascript or see my portofilio"
         />
+        <meta property="og:image" content="/foto.png" />
         <link rel="icon" href="/idk.png" />
       </Head>
       <Layout>
         <div className="flex w-screen h-screen relative items-center justify-center flex-col">
-          <div className="absolute w--full h-full top-0 left-0 z-[0]"></div>
-          <h1 className="z-[1] font-bold text-red-400 text-[1.1rem]">
-            Find Number 7 Before Your Points Get to 0
+          <h1 className="z-[1] text-[1.1rem] font-mono text-gray-300">
+            Find Number{" "}
+            <span className="text-[1.1rem] font-bold text-yellow-600">7</span>{" "}
+            Before Your Points Get to{" "}
+            <span className="text-[1.1rem] font-bold text-red-600">0</span>{" "}
           </h1>
           {windowWidth < 600 ? (
             <>
@@ -93,7 +96,7 @@ export default function Home() {
                 width={300}
                 height={200}
               />
-              <h2 className="z-[1] font-bold text-green-400 text-[0.8rem] text-center">
+              <h2 className="z-[1] font-bold text-gray-300 text-[0.8rem] text-center font-mono">
                 Sorry the game cant be played on screen width less than 600px
                 <br />
                 using desktop mode or landscape screen then restart page may
@@ -102,14 +105,6 @@ export default function Home() {
             </>
           ) : (
             <>
-              <div className="relative w-full flex justify-center items-center gap-4">
-                <h2 className="z-[1] font-bold text-green-400 text-[1.1rem]">
-                  Use this Button To reset the game
-                </h2>
-                <button className="front-button" onClick={(e) => reStart()}>
-                  reset
-                </button>
-              </div>
               <div className="relative">
                 <div className="w-full h-full relative flex items-center justify-center">
                   <Image
@@ -141,13 +136,22 @@ export default function Home() {
                       <Modal handleClose={() => setModal(false)} text={win} />
                     )}
                   </AnimatePresence>
+                  <button
+                    className="absolute right-[60px] top-[75px] text-[0.6rem] text-gray-300 p-1 bg-red-800 rounded-[30%]"
+                    onClick={(e) => reStart()}
+                  >
+                    Reset
+                  </button>
                 </div>
               </div>
             </>
           )}
-          <div className="relative flex justify-center items-center gap-4 bg-[rgba(0,0,255,0.4)] px-2 my-2 rounded-lg shadow-md shadow-blue-400">
+          <div className="relative flex justify-center items-center gap-4 px-2 my-2">
             <h2 className="text2Style">See My Portofolio Instead</h2>
-            <Link href={"/portofolio"} className="front-button">
+            <Link
+              href={"/portofolio"}
+              className="front-button font-mono text-gray-300"
+            >
               Press Me!
             </Link>
           </div>

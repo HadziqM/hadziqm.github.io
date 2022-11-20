@@ -15,6 +15,14 @@ export default function Loading({ finish, wWidth }: Props) {
   }, [timer]);
   return (
     <div className="flex flex-col justify-center items-center w-screen h-screen z-[50]">
+      <div className="flex z-50">
+        <span className="text-3d-red">H</span>
+        <span className="text-3d-orange">A</span>
+        <span className="text-3d-yellow">D</span>
+        <span className="text-3d-green">Z</span>
+        <span className="text-3d-blue">I</span>
+        <span className="text-3d-purple">Q</span>
+      </div>
       <div
         className="flex justify-start h-4 border-gray-800 border bg-gray-500 items-center rounded-lg p-1 z-[50]"
         style={wWidth > 600 ? { width: 600 } : { width: 300 }}

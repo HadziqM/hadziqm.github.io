@@ -122,6 +122,60 @@ a {
   font-family: "Source Sans Pro", sans-serif;
   animation: glow 2500ms linear infinite 2000ms;
 }
+.text-3d-purple {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: purple;
+  text-shadow: 1px 1px 1px #d5d, 1px 2px 1px #d5d, 1px 3px 1px #d5d,
+    1px 4px 1px #d5d, 1px 5px 1px #d5d, 1px 18px 6px rgba(16, 16, 16, 0.4);
+}
+.text-3d-orange {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: orangered;
+  text-shadow: 1px 1px 1px #f90, 1px 2px 1px #f90, 1px 3px 1px #f90,
+    1px 4px 1px #f90, 1px 5px 1px #f90, 1px 18px 6px rgba(16, 16, 16, 0.4);
+}
+.text-3d-blue {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: blue;
+  text-shadow: 1px 1px 1px #55d, 1px 2px 1px #55d, 1px 3px 1px #55d,
+    1px 4px 1px #55d, 1px 5px 1px #55d, 1px 18px 6px rgba(16, 16, 16, 0.4);
+}
+.text-3d-green {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: green;
+  text-shadow: 1px 1px 1px #55d, 1px 2px 1px #5d5, 1px 3px 1px #5d5,
+    1px 4px 1px #5d5, 1px 5px 1px #5d5, 1px 18px 6px rgba(16, 16, 16, 0.4);
+}
+.text-3d-yellow {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: yellow;
+  text-shadow: 1px 1px 1px #dd5, 1px 2px 1px #dd5, 1px 3px 1px #dd5,
+    1px 4px 1px #dd5, 1px 5px 1px #dd5, 1px 18px 6px rgba(16, 16, 16, 0.4);
+}
+.text-3d-red {
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: red;
+  text-shadow: 1px 1px 1px #f55, 1px 2px 1px #f55, 1px 3px 1px #f55,
+    1px 4px 1px #f55, 1px 5px 1px #f55, 1px 18px 6px rgba(16, 16, 16, 0.4);
+}
 @keyframes glow {
   40% {
     text-shadow: 0 0 8px #fff;
