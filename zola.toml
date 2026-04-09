@@ -1,6 +1,10 @@
 # The URL the site will be built for
 base_url = "https://hadziqm.github.io"
 
+title = "Hadziq Masfuh - Portfolio"
+description = "Personal Portfolio owned by Hadziq Masfuh"
+
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
@@ -39,3 +43,18 @@ socials = [
     # { name = "mastodon", url = "https://hachyderm.io/@ebkalderon" },
     # { name = "keyoxide", url = "https://keyoxide.org/d5ad5bd47835b0f0b0c3046c00ab4c0942dcba25" },
 ]
+
+
+[extra.content_security_policy]
+enable = true
+allowed_domains = [
+    { directive = "base-uri", domains = ["'self'"] },
+    { directive = "connect-src", domains = ["'self'", "cloudflareinsights.com"] },
+    { directive = "form-action", domains = ["'self'"] },
+    { directive = "script-src", domains = ["'self'", "static.cloudflareinsights.com", "'sha256-yei5Fza+Eyx4G0smvN0xBqEesIKumz6RSyGsU3FJowI='"] },
+]
+
+
+[extra.responsive_images]
+widths = [640, 784, 1280, 1920, 2560]
+fallback_width = 1280
