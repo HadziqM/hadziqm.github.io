@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src-attr 'unsafe-inline'">
+
+    <title>Ship Maintenance &amp; Monitoring System | </title>
+
+    <link rel="preload" href="http://hadziqm.github.io/fonts/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="http://hadziqm.github.io/fonts/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://hadziqm.github.io/css/style.css?h=dafc318536104931185c">
+    <script src="http://hadziqm.github.io/js/auto-close-popover-on-resize.js?h=4ef87d6fc7b98b22e044" defer></script>
+    <script src="http://hadziqm.github.io/js/copy-code-to-clipboard.js?h=6eec6d5a29e934c1de32" defer></script>
+
+    <link rel="canonical" href="http://hadziqm.github.io/project/fuel-monitor/">
+    
+    <meta name="author" content="Hadziq Masfuh">
+    <meta name="description" content="Design system for monitor ship fuel consumption and its engine health for adaptive maintenance">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#211f1a">
+    <meta name="color-scheme" content="dark">
+
+    <meta property="og:title" content="Ship Maintenance & Monitoring System">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://hadziqm.github.io/project/fuel-monitor/">
+    <meta property="og:description" content="Design system for monitor ship fuel consumption and its engine health for adaptive maintenance">
+    <meta property="og:site_name" content="">
+    <meta property="og:updated_time" content="2026-04-09T12:25:17.102289641+07:00">
+    <meta property="article:published_time" content="2024-01-01T00:00:00+00:00">
+
+</head>
+
+<body class="layout-center" data-theme="terminus">
+    <header class="header">
+        <div class="header-container">
+            <span class="header-logo-container">
+                <a href="http://hadziqm.github.io">
+                    <span class="logo"></span>
+                </a>
+            </span>
+        </div>
+        <nav class="main-menu" aria-label="Main Menu">
+            <a class="skip-to-content" href="#main">Skip to main content</a>
+            <button class="main-menu-dropdown-button" popovertarget="nav-menu">Menu</button>
+            <ul id="nav-menu" class="main-menu-items" aria-label="Site Navigation" popover>
+                <li><a href="http://hadziqm.github.io/projects/">projects</a></li>
+                <li><a href="https://github.com/ebkalderon/terminus" target="_blank">github</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <article class="post content">
+            <header>
+                <h1 class="post-title">
+                    <a href="http://hadziqm.github.io/project/fuel-monitor/">Ship Maintenance &amp; Monitoring System</a>
+                </h1>
+                <ul class="post-meta hidden">
+                    <li title="Published on 2024-01-01"><time datetime="2024-01-01">2024.01.01</time></li>
+                    <li role="separator" aria-hidden="true">::</li>
+                    <li title="Authors">Hadziq Masfuh</li>
+                    <li role="separator" aria-hidden="true">::</li>
+                    <li title="350 words"><time datetime="PT2M">2 min</time> read</li>
+                </ul>
+                <div class="post-tags">
+                </div>
+            </header>
+
+<h2 id="ship-maintenance-monitoring-system">Ship Maintenance &amp; Monitoring System<a class="post-anchor" href="#ship-maintenance-monitoring-system" aria-label="Anchor link for: ship-maintenance-monitoring-system"><span aria-hidden="true">#</span></a>
+</h2>
+<h3 id="description">Description<a class="post-anchor" href="#description" aria-label="Anchor link for: description"><span aria-hidden="true">#</span></a>
+</h3>
+<p>Developed and implemented a ship maintenance and monitoring system designed to track operational parameters and improve maintenance efficiency on a ferry ship.</p>
+<p>The system collects real-time data from multiple sensors, including fuel flow, engine RPM, exhaust temperature, and GPS location. A <strong>NodeMCU-based local system</strong> handles initial data acquisition and validation over a Wi-Fi network before synchronizing with a public server.</p>
+<p>The platform is designed with a <strong>local-first architecture</strong>, ensuring continued operation even without internet connectivity. Processed data is then transmitted to a <strong>VPS for remote monitoring and control</strong>, making the system accessible online.</p>
+<hr />
+<h3 id="responsibilities">Responsibilities<a class="post-anchor" href="#responsibilities" aria-label="Anchor link for: responsibilities"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>Selected and integrated hardware sensors:
+<ul>
+<li>Fuel flow sensor</li>
+<li>Hall effect sensor for RPM (installed on ship panel)</li>
+<li>Exhaust temperature sensor (via microcontroller)</li>
+<li>GPS module</li>
+</ul>
+</li>
+<li>Developed local data acquisition system using NodeMCU</li>
+<li>Implemented initial data validation and preprocessing on-device</li>
+<li>Designed communication between local system and remote server</li>
+<li>Configured VPS for public data access and control</li>
+<li>Deployed and tested system on an operational ferry (Java–Bali route)</li>
+</ul>
+<hr />
+<h3 id="features">Features<a class="post-anchor" href="#features" aria-label="Anchor link for: features"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>Real-time monitoring of ship operational parameters</li>
+<li>Local-first system (works without constant internet)</li>
+<li>On-device data validation and preprocessing</li>
+<li>Remote monitoring and control via VPS</li>
+<li>GPS tracking integration</li>
+<li>Scalable architecture for additional sensors</li>
+</ul>
+<hr />
+<h3 id="technologies">Technologies<a class="post-anchor" href="#technologies" aria-label="Anchor link for: technologies"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li><strong>Microcontroller:</strong> NodeMCU (ESP8266)</li>
+<li><strong>Protocol:</strong> MODBUS (Serial Communication), TCP (ESP using channel)</li>
+<li><strong>Gateway / Edge Controller:</strong> Linux-based Mini PC</li>
+<li><strong>Programming:</strong>
+<ul>
+<li>Embedded C / Arduino (sensor layer)</li>
+<li>Rust (data processing, communication, system control)</li>
+</ul>
+</li>
+<li><strong>Networking:</strong>
+<ul>
+<li>Wi-Fi (local communication)</li>
+<li>VPN + VPS (public access and remote control)</li>
+</ul>
+</li>
+<li><strong>Architecture:</strong>
+<ul>
+<li>Local-first data processing (on microcontroller &amp; mini PC)</li>
+<li>Edge-to-server synchronization</li>
+<li>failure detection and recovery (signal lost or power lost)</li>
+<li>Data processing and visualization</li>
+<li>on demand calibration using remote control</li>
+<li>Distributed monitoring system (device → gateway → cloud)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="hardware">Hardware<a class="post-anchor" href="#hardware" aria-label="Anchor link for: hardware"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>Fuel flow sensor (MODBUS)</li>
+<li>Hall effect sensor (RPM)</li>
+<li>Exhaust temperature sensor</li>
+<li>GPS module</li>
+<li>NodeMCU (ESP8266)</li>
+</ul>
+<hr />
+<h3 id="focus-area">Focus Area<a class="post-anchor" href="#focus-area" aria-label="Anchor link for: focus-area"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>IoT systems</li>
+<li>Embedded systems</li>
+<li>Real-time monitoring</li>
+<li>Industrial data acquisition</li>
+<li>Edge computing (local-first processing)</li>
+</ul>
+<hr />
+<p><img src="/images/fuel_monitor_panel_make.jpg" alt="control panel sensor" /></p>
+<p><em>Figure: Control Panel on the process</em></p>
+<p><img src="/images/testing_system.jpg" alt="testing system" /></p>
+<p><em>Figure: Control Panel on the process</em></p>
+<p><img src="/images/monitoring_panel_engine_room.jpg" alt="installed panel" /></p>
+<p><em>Figure: Installed Control Panel on engine room</em></p>
+
+        </article>
+        <nav class="post-navigation">
+            <header class="post-navigation-title">
+                <h2>Read More Posts</h2>
+                <hr>
+            </header>
+            <div class="post-navigation-buttons">
+                <a rel="next" href="http://hadziqm.github.io/project/dual-fuel/" aria-label="Next article">
+                    <span aria-hidden="true">&lt;&nbsp;[</span>Dual Fuel Generator System Project<span aria-hidden="true">]</span>
+                </a>
+            </div>
+        </nav>
+    </main>
+    <footer class="footer">
+        <address class="socials">
+            <ul>
+                <li>
+                    <a class="social-link" rel="me" href="mailto:hello@example.com" title="email" aria-label="email">
+                        <svg role="img" aria-label="email icon">
+                            <use aria-hidden="true" href="http://hadziqm.github.io/images/social_icons/email.svg#icon" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" rel="me" href="https://github.com/ebkalderon" title="github" aria-label="github">
+                        <svg role="img" aria-label="github icon">
+                            <use aria-hidden="true" href="http://hadziqm.github.io/images/social_icons/github.svg#icon" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" rel="me" href="https://www.linkedin.com/in/ebkalderon" title="linkedin" aria-label="linkedin">
+                        <svg role="img" aria-label="linkedin icon">
+                            <use aria-hidden="true" href="http://hadziqm.github.io/images/social_icons/linkedin.svg#icon" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" rel="me" href="https://hachyderm.io/@ebkalderon" title="mastodon" aria-label="mastodon">
+                        <svg role="img" aria-label="mastodon icon">
+                            <use aria-hidden="true" href="http://hadziqm.github.io/images/social_icons/mastodon.svg#icon" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-link" rel="me" href="https://keyoxide.org/d5ad5bd47835b0f0b0c3046c00ab4c0942dcba25" title="keyoxide" aria-label="keyoxide">
+                        <svg role="img" aria-label="keyoxide icon">
+                            <use aria-hidden="true" href="http://hadziqm.github.io/images/social_icons/keyoxide.svg#icon" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </address>
+        <p class="copyright">
+            <span>© <time>2026</time></span>
+            <span>Powered by <a rel="external" href="https://www.getzola.org">Zola</a></span>
+            <span>Theme by <a rel="external" href="https://eyalkalderon.com">ebkalderon</a></span>
+        </p>
+    </footer>
+</body>
+
+</html>

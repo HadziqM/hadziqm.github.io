@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src-attr 'unsafe-inline'">
 
-    <title></title>
+    <title>Dual Fuel Generator System Project | </title>
 
     <link rel="preload" href="http://hadziqm.github.io/fonts/FiraCode-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="http://hadziqm.github.io/fonts/FiraCode-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -14,17 +14,21 @@
     <script src="http://hadziqm.github.io/js/auto-close-popover-on-resize.js?h=4ef87d6fc7b98b22e044" defer></script>
     <script src="http://hadziqm.github.io/js/copy-code-to-clipboard.js?h=6eec6d5a29e934c1de32" defer></script>
 
-    <link rel="canonical" href="http://hadziqm.github.io/">
+    <link rel="canonical" href="http://hadziqm.github.io/project/dual-fuel/">
     
+    <meta name="author" content="Hadziq Masfuh">
+    <meta name="description" content="Control and monitoring Fuel balance (Diesel &amp;amp; Gas) and efficency of the machine">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#211f1a">
     <meta name="color-scheme" content="dark">
 
-    <meta property="og:title" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://hadziqm.github.io/">
+    <meta property="og:title" content="Dual Fuel Generator System Project">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://hadziqm.github.io/project/dual-fuel/">
+    <meta property="og:description" content="Control and monitoring Fuel balance (Diesel &amp;amp; Gas) and efficency of the machine">
     <meta property="og:site_name" content="">
     <meta property="og:updated_time" content="2026-04-09T12:25:17.102289641+07:00">
+    <meta property="article:published_time" content="2025-12-23T00:00:00+00:00">
 
 </head>
 
@@ -47,18 +51,11 @@
         </nav>
     </header>
     <main id="main">
-        <header class="content framed">
-            <h1 id="about-me">About Me</h1>
-            <p>My name is Hadziq Masfuh I am an Electrical Engineer graduate with hands-on experience
-            in industrial monitoring systems, communication protocols, and system integration.
-            This site display my work and project experience i had for the past years.</p>
-            <p>feel free to lookaround!</p>
-        </header>
-        <article class="post">
+        <article class="post content">
             <header>
-                <h2 class="post-title">
+                <h1 class="post-title">
                     <a href="http://hadziqm.github.io/project/dual-fuel/">Dual Fuel Generator System Project</a>
-                </h2>
+                </h1>
                 <ul class="post-meta hidden">
                     <li title="Published on 2025-12-23"><time datetime="2025-12-23">2025.12.23</time></li>
                     <li role="separator" aria-hidden="true">::</li>
@@ -69,27 +66,101 @@
                 <div class="post-tags">
                 </div>
             </header>
-            <p>Control and monitoring Fuel balance (Diesel &amp; Gas) and efficency of the machine</p>
-            <a class="read-more" href="http://hadziqm.github.io/project/dual-fuel/" aria-label="Read more about Dual Fuel Generator System Project">read more →</a>
+
+<h2 id="dual-fuel-generator-system-project-diesel-gas">Dual Fuel Generator System Project (Diesel &amp; Gas)<a class="post-anchor" href="#dual-fuel-generator-system-project-diesel-gas" aria-label="Anchor link for: dual-fuel-generator-system-project-diesel-gas"><span aria-hidden="true">#</span></a>
+</h2>
+<h3 id="description">Description<a class="post-anchor" href="#description" aria-label="Anchor link for: description"><span aria-hidden="true">#</span></a>
+</h3>
+<p>Participated in the development of a dual fuel system (diesel and gas) for generators, aimed at improving fuel efficiency and operational performance.</p>
+<p>I was part of the <strong>Measurement and Monitoring Team</strong>, focusing on building a reliable communication and monitoring system for real-time operational data.</p>
+<p>The system utilizes the <strong>MODBUS protocol</strong> to integrate multiple devices, including the generator, gas sensors, and fuel flow sensors. The monitoring platform runs on a <strong>Linux (Nix-based) system</strong>, ensuring flexibility, reproducibility, and ease of deployment.</p>
+<hr />
+<h3 id="responsibilities">Responsibilities<a class="post-anchor" href="#responsibilities" aria-label="Anchor link for: responsibilities"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>Developed MODBUS-based communication system (serial)</li>
+<li>Integrated data from:
+<ul>
+<li>Generator</li>
+<li>Gas sensors</li>
+<li>Fuel flow sensors</li>
+</ul>
+</li>
+<li>Designed and configured sensor components</li>
+<li>Set up and configured a Linux-based mini PC</li>
+<li>Built monitoring system for real-time data acquisition</li>
+<li>Developed web-based interface for system visualization</li>
+<li>Deployed system online via reverse proxy:
+<ul>
+<li>Local server → VPN → VPS → Public access</li>
+</ul>
+</li>
+<li>Conducted testing and validation of measurement data</li>
+</ul>
+<hr />
+<h3 id="features">Features<a class="post-anchor" href="#features" aria-label="Anchor link for: features"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>Real-time monitoring of generator performance</li>
+<li>Integrated multi-sensor data acquisition</li>
+<li>Remote access via web interface</li>
+<li>Secure online exposure using VPN + reverse proxy</li>
+<li>Modular and scalable system design</li>
+</ul>
+<hr />
+<h3 id="technologies">Technologies<a class="post-anchor" href="#technologies" aria-label="Anchor link for: technologies"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li><strong>Protocol:</strong> MODBUS (Serial Communication)</li>
+<li><strong>Programming Language:</strong> Rust</li>
+<li><strong>Operating System:</strong> Linux (Nix-based system)</li>
+<li><strong>Backend/System:</strong> Embedded + Mini PC</li>
+<li><strong>Frontend:</strong> Web-based monitoring interface</li>
+<li><strong>Networking:</strong>
+<ul>
+<li>VPN tunneling</li>
+<li>Reverse proxy (local to VPS)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="hardware">Hardware<a class="post-anchor" href="#hardware" aria-label="Anchor link for: hardware"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>Generator</li>
+<li>Gas sensor</li>
+<li>Fuel flow sensor</li>
+<li>Mini PC (Linux-based controller)</li>
+</ul>
+<hr />
+<h3 id="focus-area">Focus Area<a class="post-anchor" href="#focus-area" aria-label="Anchor link for: focus-area"><span aria-hidden="true">#</span></a>
+</h3>
+<ul>
+<li>Monitoring systems</li>
+<li>Industrial data acquisition</li>
+<li>Embedded + distributed systems</li>
+<li>System integration</li>
+</ul>
+<hr />
+<p><img src="/images/fuel_flow_sensor_generator.jpg" alt="Generator" /></p>
+<p><em>Figure: Installed Fuel Flow Sensor on Generator</em></p>
+<p><img src="/images/gas_pid_control.jpg" alt="Gas Control" /></p>
+<p><em>Figure: Configure Gas Input PID</em></p>
+<p><img src="/images/web_hmi.jpg" alt="Web-HMI" /></p>
+<p><em>Figure: Web Based HMI on the control room</em></p>
+
         </article>
-        <article class="post">
-            <header>
-                <h2 class="post-title">
-                    <a href="http://hadziqm.github.io/project/fuel-monitor/">Ship Maintenance &amp; Monitoring System</a>
-                </h2>
-                <ul class="post-meta hidden">
-                    <li title="Published on 2024-01-01"><time datetime="2024-01-01">2024.01.01</time></li>
-                    <li role="separator" aria-hidden="true">::</li>
-                    <li title="Authors">Hadziq Masfuh</li>
-                    <li role="separator" aria-hidden="true">::</li>
-                    <li title="350 words"><time datetime="PT2M">2 min</time> read</li>
-                </ul>
-                <div class="post-tags">
-                </div>
+        <nav class="post-navigation">
+            <header class="post-navigation-title">
+                <h2>Read More Posts</h2>
+                <hr>
             </header>
-            <p>Design system for monitor ship fuel consumption and its engine health for adaptive maintenance</p>
-            <a class="read-more" href="http://hadziqm.github.io/project/fuel-monitor/" aria-label="Read more about Ship Maintenance &amp; Monitoring System">read more →</a>
-        </article>
+            <div class="post-navigation-buttons">
+                <a rel="prev" href="http://hadziqm.github.io/project/fuel-monitor/" aria-label="Prev article">
+                    <span aria-hidden="true">[</span>Ship Maintenance &amp; Monitoring System<span aria-hidden="true">]&nbsp;&gt;</span>
+                </a>
+            </div>
+        </nav>
     </main>
     <footer class="footer">
         <address class="socials">

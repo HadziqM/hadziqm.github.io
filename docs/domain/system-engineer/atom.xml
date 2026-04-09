@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - System Engineer</title>
+    <link rel="self" type="application/atom+xml" href="http://hadziqm.github.io/domain/system-engineer/atom.xml"/>
+    <link rel="alternate" type="text/html" href="http://hadziqm.github.io"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-12-23T00:00:00+00:00</updated>
+    <id>http://hadziqm.github.io/domain/system-engineer/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Dual Fuel Generator System Project</title>
+        <published>2025-12-23T00:00:00+00:00</published>
+        <updated>2025-12-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Hadziq Masfuh
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="http://hadziqm.github.io/project/dual-fuel/"/>
+        <id>http://hadziqm.github.io/project/dual-fuel/</id>
+        
+        <content type="html" xml:base="http://hadziqm.github.io/project/dual-fuel/">&lt;h2 id=&quot;dual-fuel-generator-system-project-diesel-gas&quot;&gt;Dual Fuel Generator System Project (Diesel &amp;amp; Gas)&lt;a class=&quot;post-anchor&quot; href=&quot;#dual-fuel-generator-system-project-diesel-gas&quot; aria-label=&quot;Anchor link for: dual-fuel-generator-system-project-diesel-gas&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;description&quot;&gt;Description&lt;a class=&quot;post-anchor&quot; href=&quot;#description&quot; aria-label=&quot;Anchor link for: description&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;p&gt;Participated in the development of a dual fuel system (diesel and gas) for generators, aimed at improving fuel efficiency and operational performance.&lt;&#x2F;p&gt;
+&lt;p&gt;I was part of the &lt;strong&gt;Measurement and Monitoring Team&lt;&#x2F;strong&gt;, focusing on building a reliable communication and monitoring system for real-time operational data.&lt;&#x2F;p&gt;
+&lt;p&gt;The system utilizes the &lt;strong&gt;MODBUS protocol&lt;&#x2F;strong&gt; to integrate multiple devices, including the generator, gas sensors, and fuel flow sensors. The monitoring platform runs on a &lt;strong&gt;Linux (Nix-based) system&lt;&#x2F;strong&gt;, ensuring flexibility, reproducibility, and ease of deployment.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;responsibilities&quot;&gt;Responsibilities&lt;a class=&quot;post-anchor&quot; href=&quot;#responsibilities&quot; aria-label=&quot;Anchor link for: responsibilities&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Developed MODBUS-based communication system (serial)&lt;&#x2F;li&gt;
+&lt;li&gt;Integrated data from:
+&lt;ul&gt;
+&lt;li&gt;Generator&lt;&#x2F;li&gt;
+&lt;li&gt;Gas sensors&lt;&#x2F;li&gt;
+&lt;li&gt;Fuel flow sensors&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Designed and configured sensor components&lt;&#x2F;li&gt;
+&lt;li&gt;Set up and configured a Linux-based mini PC&lt;&#x2F;li&gt;
+&lt;li&gt;Built monitoring system for real-time data acquisition&lt;&#x2F;li&gt;
+&lt;li&gt;Developed web-based interface for system visualization&lt;&#x2F;li&gt;
+&lt;li&gt;Deployed system online via reverse proxy:
+&lt;ul&gt;
+&lt;li&gt;Local server → VPN → VPS → Public access&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;Conducted testing and validation of measurement data&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;features&quot;&gt;Features&lt;a class=&quot;post-anchor&quot; href=&quot;#features&quot; aria-label=&quot;Anchor link for: features&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time monitoring of generator performance&lt;&#x2F;li&gt;
+&lt;li&gt;Integrated multi-sensor data acquisition&lt;&#x2F;li&gt;
+&lt;li&gt;Remote access via web interface&lt;&#x2F;li&gt;
+&lt;li&gt;Secure online exposure using VPN + reverse proxy&lt;&#x2F;li&gt;
+&lt;li&gt;Modular and scalable system design&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;technologies&quot;&gt;Technologies&lt;a class=&quot;post-anchor&quot; href=&quot;#technologies&quot; aria-label=&quot;Anchor link for: technologies&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Protocol:&lt;&#x2F;strong&gt; MODBUS (Serial Communication)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Programming Language:&lt;&#x2F;strong&gt; Rust&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Operating System:&lt;&#x2F;strong&gt; Linux (Nix-based system)&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Backend&#x2F;System:&lt;&#x2F;strong&gt; Embedded + Mini PC&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Frontend:&lt;&#x2F;strong&gt; Web-based monitoring interface&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Networking:&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;VPN tunneling&lt;&#x2F;li&gt;
+&lt;li&gt;Reverse proxy (local to VPS)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;hardware&quot;&gt;Hardware&lt;a class=&quot;post-anchor&quot; href=&quot;#hardware&quot; aria-label=&quot;Anchor link for: hardware&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Generator&lt;&#x2F;li&gt;
+&lt;li&gt;Gas sensor&lt;&#x2F;li&gt;
+&lt;li&gt;Fuel flow sensor&lt;&#x2F;li&gt;
+&lt;li&gt;Mini PC (Linux-based controller)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;focus-area&quot;&gt;Focus Area&lt;a class=&quot;post-anchor&quot; href=&quot;#focus-area&quot; aria-label=&quot;Anchor link for: focus-area&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;#&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Monitoring systems&lt;&#x2F;li&gt;
+&lt;li&gt;Industrial data acquisition&lt;&#x2F;li&gt;
+&lt;li&gt;Embedded + distributed systems&lt;&#x2F;li&gt;
+&lt;li&gt;System integration&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;hr &#x2F;&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;fuel_flow_sensor_generator.jpg&quot; alt=&quot;Generator&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Figure: Installed Fuel Flow Sensor on Generator&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;gas_pid_control.jpg&quot; alt=&quot;Gas Control&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Figure: Configure Gas Input PID&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;images&#x2F;web_hmi.jpg&quot; alt=&quot;Web-HMI&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;em&gt;Figure: Web Based HMI on the control room&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>
