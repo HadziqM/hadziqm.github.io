@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: http://hadziqm.github.io/sitemap.xml
+Sitemap: https://hadziqm.github.io/sitemap.xml
