@@ -83,14 +83,14 @@ The platform is designed with a **local-first architecture**, ensuring continued
 
 ---
 
-![control panel sensor](/images/fuel_monitor_panel_make.jpg)
+![control panel sensor](/fuel_monitor_panel_make.jpg)
 
 *Figure: Control Panel on the process*
 
-![testing system](/images/testing_system.jpg)
+![testing system](/testing_system.jpg)
 
 *Figure: Control Panel on the process*
 
-![installed panel](/images/monitoring_panel_engine_room.jpg)
+![installed panel](/monitoring_panel_engine_room.jpg)
 
 *Figure: Installed Control Panel on engine room*

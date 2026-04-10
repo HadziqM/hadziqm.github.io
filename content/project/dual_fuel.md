@@ -73,15 +73,15 @@ The system utilizes the **MODBUS protocol** to integrate multiple devices, inclu
 - System integration
 
 ---
-![Generator](/images/fuel_flow_sensor_generator.jpg)
+![Generator](/fuel_flow_sensor_generator.jpg)
 
 *Figure: Installed Fuel Flow Sensor on Generator*
 
-![Gas Control](/images/gas_pid_control.jpg)
+![Gas Control](/gas_pid_control.jpg)
 
 *Figure: Configure Gas Input PID*
 
-![Web-HMI](/images/web_hmi.jpg)
+![Web-HMI](/web_hmi.jpg)
 
 *Figure: Web Based HMI on the control room*
 
